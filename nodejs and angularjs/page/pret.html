@@ -1,0 +1,73 @@
+<h2 class="display-1" ng-model="disponible_jet_client">Jeton disponible pour le pret: {{ disponible_jet_client }}</h2>
+<h2 style="color: red" class="display-1" role="alert">{{ erreur }}</h2>
+	<div class="row">
+<div class="col-sm-4 form-group">
+	<label>Pret</label>
+	<input type="number" ng-model="writed_jeton" class="form-control">
+	<br>
+	<label>Préter à</label>
+	<select  type="number" class="form-control" ng-model="selected_client">
+		<option ng-repeat="liste_client in liste_client" value="{{liste_client.id}}">{{ liste_client.nom }}</option>
+	</select>
+	<br>
+	<input type="button" class="btn btn-default" value="Pret" ng-click="preter()">
+	<br>
+	<input type="button" class="btn btn-default" value="Rembourser" ng-click="rembourser()">
+</div>
+</div>
+</div>
+<h2 class="display-1">Historisation de PRET</h2>
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Pret</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  ng-repeat="liste_pret_client in liste_pret_client">
+      <th>{{liste_pret_client.nom}}</th>
+      <td style="text-align: right">{{liste_pret_client.pret}}</td>
+    </tr>
+  </tbody>
+</table>
+<h2 class="display-1">Historisation de PRET / Tiers</h2>
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Pret</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  ng-repeat="liste_pret_client_tiers in liste_pret_client_tiers">
+      <th>{{liste_pret_client_tiers.nom}}</th>
+      <td style="text-align: right">{{liste_pret_client_tiers.pret}}</td>
+    </tr>
+  </tbody>
+</table>
+<h2 class="display-1">Situation de PRET</h2>
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Pret</th>
+      <th>Remboursé</th>
+      <th>à reprendre</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  ng-repeat="situation_pret_client in situation_pret_client">
+      <th>{{situation_pret_client.nom}}</th>
+      <td style="text-align: right">{{situation_pret_client.sp}}</td>
+      <td style="text-align: right">{{situation_pret_client.sr}}</td>
+      <td style="text-align: right">{{situation_pret_client.manque}}</td>
+    </tr>
+    <tr>
+      <th> </th>
+      <td style="text-align: right">{{spmoy}}</td>
+      <td style="text-align: right">{{srmoy}}</td>
+      <td style="text-align: right">{{mamoy}}</td>
+    </tr>
+  </tbody>
+</table>
