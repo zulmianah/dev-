@@ -17,7 +17,8 @@ And a little bonus:
 
 ![](https://github.com/zulmianah/dev-/blob/master/qt/brick/screenshot/game.PNG)
 ## NODE.JS using Postgresql AND ANGULAR.JS
-Description is coming ...
+The client can connect
 ![](https://github.com/zulmianah/dev-/blob/master/nodejs%20and%20angularjs/screenshot/login.PNG)
+lol
 ![](https://github.com/zulmianah/dev-/blob/master/nodejs%20and%20angularjs/screenshot/pret.PNG)
 ![](https://github.com/zulmianah/dev-/blob/master/nodejs%20and%20angularjs/screenshot/historisation.PNG)
